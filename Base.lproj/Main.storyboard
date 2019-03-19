@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Magic8Ball" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Magic 8 Ball" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SUC-uX-xjq">
+                                <rect key="frame" x="111" y="45" width="153" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question, my dear?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ycf-CJ-HTk">
+                                <rect key="frame" x="79" y="105" width="217" height="32"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0qC-CL-jV2">
+                                <rect key="frame" x="67" y="212" width="241" height="243"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VWO-ZF-mHD">
+                                <rect key="frame" x="89" y="515" width="197" height="32"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <state key="normal" title="Ask the ball that knows all">
+                                    <color key="titleColor" red="0.67825352930000005" green="0.39753648419999998" blue="0.91588406739999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="askButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6o2-4A-kGw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.6782535292787647" green="0.39753648423502652" blue="0.91588406735751293" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="VWO-ZF-mHD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Csz-OM-jlN"/>
+                            <constraint firstItem="VWO-ZF-mHD" firstAttribute="top" secondItem="0qC-CL-jV2" secondAttribute="bottom" constant="60" id="Fc5-aB-lcN"/>
+                            <constraint firstItem="0qC-CL-jV2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="HY7-bQ-iiU"/>
+                            <constraint firstItem="0qC-CL-jV2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="I7c-7T-iRy"/>
+                            <constraint firstItem="SUC-uX-xjq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MmY-FT-zEH"/>
+                            <constraint firstItem="SUC-uX-xjq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="MoA-t6-sQE"/>
+                            <constraint firstItem="Ycf-CJ-HTk" firstAttribute="top" secondItem="SUC-uX-xjq" secondAttribute="bottom" constant="25" id="Rhv-69-6hr"/>
+                            <constraint firstItem="Ycf-CJ-HTk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Wvx-gC-B1m"/>
+                            <constraint firstItem="0qC-CL-jV2" firstAttribute="top" secondItem="Ycf-CJ-HTk" secondAttribute="bottom" constant="75" id="iiv-Fu-1PE"/>
+                            <constraint firstItem="0qC-CL-jV2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qsa-ac-Tt0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="0qC-CL-jV2" id="lwt-zi-nBU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
